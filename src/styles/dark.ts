@@ -15,6 +15,5 @@ export const dark = {
     themeButtonColor: '#ffffff',
     themeButtonHoverColor: '#90A4D4',
     danger: '#F74646'
-
-  },
-} as const;
+  }
+} as const

@@ -1,17 +1,17 @@
-import React from 'react';
-import { IUserData } from 'templates/Home';
+import React from 'react'
+import { IUserData } from 'templates/Home'
 import {
   CompanyIcon,
   LinkIcon,
   LocationIcon,
-  TwitterIcon,
-} from 'components/icons';
+  TwitterIcon
+} from 'components/icons'
 
-import * as S from './styles';
+import * as S from './styles'
 
 type CardProps = {
-  userData: IUserData;
-};
+  userData: IUserData
+}
 
 export const Card = ({ userData }: CardProps) => {
   return (
@@ -98,5 +98,5 @@ export const Card = ({ userData }: CardProps) => {
         </S.SocialMediaSection>
       </S.CardSocialMedia>
     </S.CardWrapper>
-  );
-};
+  )
+}

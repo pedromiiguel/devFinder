@@ -6,5 +6,5 @@ export const TwitterIcon = () => {
         fill="#4b6a9b"
       />
     </svg>
-  );
-};
+  )
+}

@@ -1,39 +1,39 @@
-import { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { Card, Header, SectionSearch } from 'components';
-import { api } from 'service/api';
+import { useEffect, useState } from 'react'
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { Card, Header, SectionSearch } from 'components'
+import { api } from 'service/api'
 
-import * as S from './styles';
+import * as S from './styles'
 
 export interface IUserData {
-  avatar_url?: string;
-  blog?: string;
-  company?: string;
-  followers?: string;
-  following?: string;
-  formattedDate?: string;
-  public_repos?: string;
-  twitter_username?: string;
-  user_name?: string;
-  name?: string;
-  login?: string;
-  bio?: string;
-  location?: string;
-  created_at?: string;
+  avatar_url?: string
+  blog?: string
+  company?: string
+  followers?: string
+  following?: string
+  formattedDate?: string
+  public_repos?: string
+  twitter_username?: string
+  user_name?: string
+  name?: string
+  login?: string
+  bio?: string
+  location?: string
+  created_at?: string
 }
 
 const Home: NextPage = () => {
-  const [user, setUser] = useState<string>('octocat');
-  const [userData, setUserData] = useState<IUserData>({});
-  const [error, setError] = useState('');
+  const [user, setUser] = useState<string>('octocat')
+  const [userData, setUserData] = useState<IUserData>({})
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const fetchFirstUser = async () => {
       try {
-        const { data } = await api.get<IUserData>(`users/${user}`);
+        const { data } = await api.get<IUserData>(`users/${user}`)
 
-        const createdAt = data.created_at!;
+        const createdAt = data.created_at!
 
         const formattedData = {
           ...data,
@@ -41,25 +41,25 @@ const Home: NextPage = () => {
             .toLocaleDateString('en-GB', {
               day: 'numeric',
               year: 'numeric',
-              month: 'short',
+              month: 'short'
             })
-            .replace(',', ''),
-        };
-        setError('');
-        setUserData(formattedData);
+            .replace(',', '')
+        }
+        setError('')
+        setUserData(formattedData)
       } catch (error) {
-        setError('Not results');
+        setError('Not results')
       }
-    };
+    }
 
-    fetchFirstUser();
+    fetchFirstUser()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [])
 
   const handleClick = async () => {
     try {
-      setError('');
-      const { data } = await api.get(`users/${user}`);
+      setError('')
+      const { data } = await api.get(`users/${user}`)
 
       const formattedData = {
         ...data,
@@ -67,16 +67,16 @@ const Home: NextPage = () => {
           .toLocaleDateString('en-GB', {
             day: 'numeric',
             month: 'short',
-            year: 'numeric',
+            year: 'numeric'
           })
-          .replace(',', ''),
-      };
+          .replace(',', '')
+      }
 
-      setUserData(formattedData);
+      setUserData(formattedData)
     } catch (error) {
-      setError('Not results');
+      setError('Not results')
     }
-  };
+  }
 
   return (
     <div>
@@ -101,7 +101,7 @@ const Home: NextPage = () => {
         </S.Main>
       </S.Container>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

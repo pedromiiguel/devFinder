@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Header = styled.header`
   display: flex;
@@ -6,7 +6,7 @@ export const Header = styled.header`
   justify-content: space-between;
 
   width: 100%;
-`;
+`
 
 export const HeaderTitle = styled.h1`
   font-size: 2.6rem;
@@ -17,7 +17,7 @@ export const HeaderTitle = styled.h1`
   margin: 3.2rem 0;
 
   color: ${({ theme: theme }) => theme.colors.titleColor};
-`;
+`
 
 export const ThemeButton = styled.button`
   background: transparent;
@@ -51,4 +51,4 @@ export const ThemeButton = styled.button`
       fill: ${({ theme }) => theme.colors.themeButtonHoverColor};
     }
   }
-`;
+`

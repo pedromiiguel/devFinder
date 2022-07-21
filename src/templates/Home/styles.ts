@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-`;
+`
 
 export const Main = styled.main`
   max-width: 730px;
@@ -16,7 +16,4 @@ export const Main = styled.main`
 
   color: ${({ theme: theme }) => theme.colors.background};
   margin: 0 1.6rem;
-`;
-
-
-
+`

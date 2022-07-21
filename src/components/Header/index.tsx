@@ -1,11 +1,11 @@
-import React from 'react';
-import { useTheme } from 'context/ThemeContext';
-import { MoonIcon, SunIcon } from 'components/icons';
+import React from 'react'
+import { useTheme } from 'context/ThemeContext'
+import { MoonIcon, SunIcon } from 'components/icons'
 
-import * as S from './styles';
+import * as S from './styles'
 
 export const Header: React.FC = () => {
-  const { toggleTheme, theme } = useTheme();
+  const { toggleTheme, theme } = useTheme()
 
   return (
     <S.Header>
@@ -24,7 +24,5 @@ export const Header: React.FC = () => {
         )}
       </S.ThemeButton>
     </S.Header>
-  );
-};
-
-
+  )
+}

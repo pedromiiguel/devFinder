@@ -6,5 +6,5 @@ export const LocationIcon = () => {
         fill="#4b6a9b"
       />
     </svg>
-  );
-};
+  )
+}

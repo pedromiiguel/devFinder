@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const SearchWrapper = styled.section`
   width: 100%;
@@ -23,7 +23,7 @@ export const SearchWrapper = styled.section`
   }
 
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-`;
+`
 
 export const InputSearch = styled.input`
   border: none;
@@ -68,7 +68,7 @@ export const InputSearch = styled.input`
     line-height: 2.5rem;
     font-family: 'Space Mono';
   }
-`;
+`
 
 export const ErrorMessage = styled.p`
   font-weight: bold;
@@ -83,7 +83,7 @@ export const ErrorMessage = styled.p`
   @media (max-width: 425px) {
     bottom: -22px;
   }
-`;
+`
 export const ButtonSearch = styled.button`
   width: 100px;
   height: 50px;
@@ -100,4 +100,4 @@ export const ButtonSearch = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.buttonHoverColor};
   }
-`;
+`

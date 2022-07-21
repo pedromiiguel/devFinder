@@ -1,21 +1,21 @@
-import React from 'react';
-import { SearchIcon } from 'components/icons';
+import React from 'react'
+import { SearchIcon } from 'components/icons'
 
-import * as S from './styles';
+import * as S from './styles'
 
-type SectionSearch = {
-  user: string;
-  setUser: (user: string) => void;
-  error: string;
-  handleClick: () => void;
-};
+type SectionSearchProps = {
+  user: string
+  setUser: (user: string) => void
+  error: string
+  handleClick: () => void
+}
 
 export const SectionSearch = ({
   user,
   setUser,
   error,
-  handleClick,
-}: SectionSearch) => {
+  handleClick
+}: SectionSearchProps) => {
   return (
     <S.SearchWrapper>
       <SearchIcon />
@@ -31,5 +31,5 @@ export const SectionSearch = ({
 
       <S.ButtonSearch onClick={handleClick}>Search</S.ButtonSearch>
     </S.SearchWrapper>
-  );
-};
+  )
+}

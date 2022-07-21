@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CardWrapper = styled.main`
   display: grid;
@@ -48,13 +48,13 @@ export const CardWrapper = styled.main`
   background-color: ${({ theme }) => theme.colors.inputWrapperColor};
 
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-`;
+`
 
 export const CardImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   grid-area: image;
-`;
+`
 
 export const CardUserImage = styled.img`
   width: 117px;
@@ -66,9 +66,9 @@ export const CardUserImage = styled.img`
   }
 
   border-radius: 50%;
-`;
+`
 
-export const CardContent = styled.div``;
+export const CardContent = styled.div``
 
 export const CardContentHeader = styled.div`
   display: grid;
@@ -81,19 +81,19 @@ export const CardContentHeader = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`;
+`
 export const Name = styled.h1`
   font-weight: bold;
   font-size: 2.6rem;
   line-height: 3.9rem;
   color: ${({ theme }) => theme.colors.cardTitleColor};
-`;
+`
 
 export const Tag = styled.p`
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: ${({ theme }) => theme.colors.primary};
-`;
+`
 
 export const CreatedData = styled.p`
   font-size: 1.5rem;
@@ -104,12 +104,11 @@ export const CreatedData = styled.p`
   @media (max-width: 768px) {
     text-align: initial;
   }
-
-`;
+`
 
 type CardDescriptionProps = {
-  hasData?: boolean;
-};
+  hasData?: boolean
+}
 
 export const CardDescription = styled.p<CardDescriptionProps>`
   font-size: 1.5rem;
@@ -119,7 +118,7 @@ export const CardDescription = styled.p<CardDescriptionProps>`
 
   color: ${({ theme }) => theme.colors.textColor};
   margin-top: 20px;
-`;
+`
 
 export const CardInfoData = styled.div`
   grid-area: content;
@@ -135,7 +134,7 @@ export const CardInfoData = styled.div`
   height: 85px;
 
   margin-top: 32px;
-`;
+`
 
 export const SectionInfoData = styled.div`
   display: flex;
@@ -145,20 +144,20 @@ export const SectionInfoData = styled.div`
   p {
     color: ${({ theme }) => theme.colors.textColor};
   }
-`;
+`
 
 export const Label = styled.p`
   font-size: 1.3rem;
   line-height: 1.9rem;
   color: ${({ theme }) => theme.colors.textColor};
-`;
+`
 
 export const Value = styled.p`
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 33px;
   color: ${({ theme }) => theme.colors.cardTitleColor};
-`;
+`
 
 export const CardSocialMedia = styled.div`
   grid-area: social;
@@ -175,12 +174,12 @@ export const CardSocialMedia = styled.div`
   @media (max-width: 425px) {
     grid-template-columns: 1fr;
   }
-`;
+`
 
 type SocialMediaSectionProps = {
-  hasData?: boolean;
-  underline?: boolean;
-};
+  hasData?: boolean
+  underline?: boolean
+}
 
 export const SocialMediaSection = styled.div<SocialMediaSectionProps>`
   display: flex;
@@ -209,4 +208,4 @@ export const SocialMediaSection = styled.div<SocialMediaSectionProps>`
   p {
     color: ${({ theme }) => theme.colors.textColor};
   }
-`;
+`
