@@ -1,12 +1,10 @@
 import React from 'react';
-import { useTheme } from '../../context/ThemeContext';
-import { MoonIcon } from '../icons/Moon';
-import { SunIcon } from '../icons/Sun';
+import { useTheme } from 'context/ThemeContext';
+import { MoonIcon, SunIcon } from 'components/icons';
 
 import * as S from './styles';
 
-
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const { toggleTheme, theme } = useTheme();
 
   return (
@@ -29,4 +27,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+

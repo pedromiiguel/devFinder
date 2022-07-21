@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './styles';
-import { SearchIcon } from '../icons/Search';
+import { SearchIcon } from 'components/icons';
 
+import * as S from './styles';
 
 type SectionSearch = {
   user: string;
@@ -10,7 +10,12 @@ type SectionSearch = {
   handleClick: () => void;
 };
 
-export const SectionSearch = ({ user, setUser, error, handleClick } : SectionSearch) => {
+export const SectionSearch = ({
+  user,
+  setUser,
+  error,
+  handleClick,
+}: SectionSearch) => {
   return (
     <S.SearchWrapper>
       <SearchIcon />
@@ -20,11 +25,6 @@ export const SectionSearch = ({ user, setUser, error, handleClick } : SectionSea
         type="search"
         value={user}
         onChange={(event) => setUser(event.target.value)}
-        onKeyPress={((event) => {
-          if(event.key === 'Enter'){
-            handleClick()
-          }
-        })}
       />
 
       <S.ErrorMessage>{error}</S.ErrorMessage>
@@ -33,5 +33,3 @@ export const SectionSearch = ({ user, setUser, error, handleClick } : SectionSea
     </S.SearchWrapper>
   );
 };
-
-

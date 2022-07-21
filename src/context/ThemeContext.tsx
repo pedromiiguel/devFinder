@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { light } from '../styles/light';
-import { dark } from '../styles/dark';
+import { light } from 'styles/light';
+import { dark } from 'styles/dark';
 import { Theme } from '../../types/styled-components';
 
 interface ThemeContextProps {

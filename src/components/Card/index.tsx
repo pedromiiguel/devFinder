@@ -1,9 +1,12 @@
 import React from 'react';
-import { IUserData } from '../../pages';
-import { CompanyIcon } from '../icons/Company';
-import { LinkIcon } from '../icons/Link';
-import { LocationIcon } from '../icons/Location';
-import { TwitterIcon } from '../icons/Twitter';
+import { IUserData } from 'templates/Home';
+import {
+  CompanyIcon,
+  LinkIcon,
+  LocationIcon,
+  TwitterIcon,
+} from 'components/icons';
+
 import * as S from './styles';
 
 type CardProps = {
@@ -97,4 +100,3 @@ export const Card = ({ userData }: CardProps) => {
     </S.CardWrapper>
   );
 };
-
