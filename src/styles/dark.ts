@@ -1,6 +1,6 @@
-export const dark = {
-  title: 'dark',
+import { DefaultTheme } from 'styled-components'
 
+export const dark: DefaultTheme = {
   colors: {
     primary: '#0079ff',
     textColor: '#ffffff',
@@ -16,4 +16,4 @@ export const dark = {
     themeButtonHoverColor: '#90A4D4',
     danger: '#F74646'
   }
-} as const
+}

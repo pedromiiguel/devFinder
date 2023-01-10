@@ -1,5 +1,6 @@
-export const light = {
-  title: 'light',
+import { DefaultTheme } from 'styled-components'
+
+export const light: DefaultTheme = {
   colors: {
     primary: '#0079ff',
     textColor: '#4B6A9B',
@@ -15,4 +16,4 @@ export const light = {
     themeButtonHoverColor: '#222731',
     danger: '#F74646'
   }
-} as const
+}

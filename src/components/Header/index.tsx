@@ -11,15 +11,15 @@ export const Header: React.FC = () => {
     <S.Header>
       <S.HeaderTitle>devFinder</S.HeaderTitle>
       <S.ThemeButton onClick={toggleTheme}>
-        {theme.title === 'light' ? (
-          <>
-            Light
-            <SunIcon />
-          </>
-        ) : (
+        {theme === 'light' ? (
           <>
             Dark
             <MoonIcon />
+          </>
+        ) : (
+          <>
+            Light
+            <SunIcon />
           </>
         )}
       </S.ThemeButton>
