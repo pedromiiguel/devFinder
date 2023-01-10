@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { parseCookies, setCookie } from 'nookies'
+
 import { light } from 'styles/light'
 import { dark } from 'styles/dark'
 
@@ -25,18 +25,21 @@ const themes = {
 }
 
 export function DefaultThemeProvider({ children }: ThemeProviderProps) {
-  const { theme: localTheme } = parseCookies()
-  const [theme, setTheme] = useState<'dark' | 'light'>(
-    (localTheme as ThemeType) || ThemeType.light
-  )
+  const [theme, setTheme] = useState<'dark' | 'light'>(ThemeType.dark)
 
   const toggleTheme = () => {
     const activeTheme =
       theme === ThemeType.light ? ThemeType.dark : ThemeType.light
     setTheme(activeTheme)
-
-    setCookie(null, 'theme', activeTheme)
+    localStorage.setItem('theme', activeTheme)
   }
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('theme')
+    if (data) {
+      setTheme(data as ThemeType)
+    }
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
